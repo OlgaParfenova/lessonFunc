@@ -534,3 +534,64 @@
 // console.log(test([2, 4, 8, 6], function (num) {
 //     return num ** 3;
 // }));
+
+// task 37
+
+// function func(num1, num2) {
+//     function square(num) {
+//         return num ** 2;
+//     }
+//     function cube(num) {
+//         return num ** 3;
+//     }
+//     return square(num1) + cube(num2);
+// }
+//
+// console.log(func(1, 2));
+
+// task 38
+
+// function func() {
+//     return function() {
+//         return function() {
+//             return function() {
+//                 return function() {
+//                     return '!';
+//                 }
+//             }
+//         }
+//     }
+// }
+//
+// console.log(func()()()()());
+
+// task 39
+
+// function func(num1){
+//     return function(num2) {
+//         return function(num3){
+//             return num1 + num2 + num3;
+//         }
+//     }
+// }
+//
+// console.log(func(2)(3)(4));
+
+// task 40
+// function func(num1) {
+//     return function (num2) {
+//         return function (num3) {
+//             return function (num4) {
+//                 return function () {
+//                     let arr = [];
+//                     arr.push(num1, num2, num3, num4);
+//                     return arr;
+//                 }
+//             }
+//         }
+//     }
+// }
+//
+// console.log(func(2)(3)(4)(5)());
+
+// task 41
