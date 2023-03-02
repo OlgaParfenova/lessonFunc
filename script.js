@@ -306,3 +306,231 @@
 // }
 //
 // console.log(getFriendlyPairs(1, 1000));
+
+// task 25
+// function isPerfect(num) {
+//     let dividers = [];
+//     let sum = 0;
+//
+//     for (let i = 1; i < num; i++) {
+//         if (num % i === 0) dividers.push(i);
+//     }
+//     dividers.forEach((elem) => sum += elem);
+//
+//     if (sum === num) return 'The number is perfect';
+//     return 'The number is not perfect';
+// }
+//
+// console.log(isPerfect(6));
+
+// task 26
+// function getLucky(arr) {
+//     let lucky = [];
+//     arr.forEach(function (elem) {
+//         const str = String(elem);
+//         const sumStart = +str[0] + +str[1] + +str[2];
+//         const sumEnd = +str[3] + +str[4] + +str[5];
+//         if (sumStart === sumEnd) lucky.push(elem);
+//     });
+//     return lucky;
+// }
+
+// task 27
+// function getCommonDividers(num1, num2) {
+//     let res = [];
+//     let dividers1 = [];
+//     let dividers2 = [];
+//
+//     for (let i = 1; i < num1; i++) {
+//         if (num1 % i === 0) dividers1.push(i);
+//     }
+//
+//     for (let j = 1; j < num2; j++) {
+//         if (num2 % j === 0) dividers2.push(j);
+//     }
+//
+//     for (let k = 0; k < dividers1.length || k < dividers2.length; k++) {
+//         if (dividers1[k] === dividers2[k]) res.push(dividers1[k]);
+//     }
+//     return res;
+// }
+//
+// task 28
+// function translit(word){
+//
+//     let answer = '';
+//
+//     const converter = {
+//
+//         'а': 'a',    'б': 'b',    'в': 'v',    'г': 'g',    'д': 'd',
+//
+//         'е': 'e',    'ё': 'e',    'ж': 'zh',   'з': 'z',    'и': 'i',
+//
+//         'й': 'y',    'к': 'k',    'л': 'l',    'м': 'm',    'н': 'n',
+//
+//         'о': 'o',    'п': 'p',    'р': 'r',    'с': 's',    'т': 't',
+//
+//         'у': 'u',    'ф': 'f',    'х': 'h',    'ц': 'c',    'ч': 'ch',
+//
+//         'ш': 'sh',   'щ': 'sch',  'ь': '',     'ы': 'y',    'ъ': '',
+//
+//         'э': 'e',    'ю': 'yu',   'я': 'ya',
+//
+//
+//
+//         'А': 'A',    'Б': 'B',    'В': 'V',    'Г': 'G',    'Д': 'D',
+//
+//         'Е': 'E',    'Ё': 'E',    'Ж': 'Zh',   'З': 'Z',    'И': 'I',
+//
+//         'Й': 'Y',    'К': 'K',    'Л': 'L',    'М': 'M',    'Н': 'N',
+//
+//         'О': 'O',    'П': 'P',    'Р': 'R',    'С': 'S',    'Т': 'T',
+//
+//         'У': 'U',    'Ф': 'F',    'Х': 'H',    'Ц': 'C',    'Ч': 'Ch',
+//
+//         'Ш': 'Sh',   'Щ': 'Sch',  'Ь': '',     'Ы': 'Y',    'Ъ': '',
+//
+//         'Э': 'E',    'Ю': 'Yu',   'Я': 'Ya'
+//
+//     };
+//
+//
+//
+//     for (let i = 0; i < word.length; ++i ) {
+//
+//         if (converter[word[i]] === undefined){
+//
+//             answer += word[i];
+//
+//         } else {
+//
+//             answer += converter[word[i]];
+//
+//         }
+//
+//     }
+//
+//     return answer;
+// }
+//
+// console.log(translit('отстань'));
+
+// task 29
+
+// let arr = [
+//     function() {return 1},
+//     function() {return 2},
+//     function() {return 3},
+// ];
+//
+// for (let func of arr) {
+//     console.log(func());
+// }
+
+// task 30
+
+// let obj = {
+//     func1: function() {return 1},
+//     func2: function() {return 2},
+//     func3: function() {return 3},
+// };
+//
+// let sum = obj.func1() + obj.func2() + obj.func3();
+//
+// for (let fun in obj) {
+//     console.log(obj[fun]());
+// }
+//
+// console.log(sum);
+
+// task 31
+
+// let math = {
+//     sum: function(arr) {
+//         let s = 0;
+//         arr.forEach((elem) => s += elem);
+//         return s;
+//     },
+//     sumSquare: function(arr) {
+//         let s = 0;
+//         arr.forEach((elem) => s += (elem ** 2));
+//         return s;
+//     },
+//     sumCube: function(arr) {
+//         let s = 0;
+//         arr.forEach((elem) => s += (elem ** 3));
+//         return s;
+//     },
+// };
+//
+// console.log(math.sum([1, 2, 3]));
+// console.log(math.sumSquare([1, 2, 3]));
+// console.log(math.sumCube([1, 2, 3]));
+
+// task 32
+
+// function test(f1, f2, f3) {
+//     console.log(f1() + f2() + f3());
+// }
+//
+// test(
+//     function() {return 1;},
+//     function() {return 2;},
+//     function() {return 3;},
+// )
+
+// task 33
+// function test(f1, f2, f3) {
+//     return f1() + f2() + f3();
+// }
+//
+// let func1 = function() {
+//     return 1;
+// };
+//
+// let func2 = function() {
+//     return 2;
+// };
+//
+// let func3 = function() {
+//     return 3;
+// };
+//
+// console.log(test(func1, func2, func3));
+
+// task 34
+
+// function test(func) {
+//     console.log(func(2, 3));
+// }
+//
+// let func = function(num1, num2) {
+//     return num1 + num2;
+// }
+//
+// test(func);
+
+// task 35
+
+// function test(num, func1, func2) {
+//     return func1(num) + func2(num);
+// }
+//
+// console.log(test(3, function (num) {
+//     return num ** 2;
+// }, function (num) {
+//     return num ** 3;
+// }));
+
+// task 36
+
+// function test(arr, func) {
+//     for (let i = 0; i < arr.length; i++) {
+//         arr[i] = func(arr[i]);
+//     }
+//     return arr;
+// }
+//
+// console.log(test([2, 4, 8, 6], function (num) {
+//     return num ** 3;
+// }));
